@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16591A182234D1E9002781C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16591A162234D1E9002781C1 /* Main.storyboard */; };
+		16591A1A2234D20A002781C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16591A192234D20A002781C1 /* Assets.xcassets */; };
+		16591A1D2234D20A002781C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16591A1B2234D20A002781C1 /* LaunchScreen.storyboard */; };
+		16591A282234D597002781C1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A272234D597002781C1 /* AudioToolbox.framework */; };
+		16591A2A2234D5AD002781C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A292234D5AD002781C1 /* CoreGraphics.framework */; };
+		16591A2C2234D5BA002781C1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A2B2234D5BA002781C1 /* CoreMotion.framework */; };
+		16591A2E2234D5C5002781C1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A2D2234D5C5002781C1 /* CoreText.framework */; };
+		16591A302234D5D5002781C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A2F2234D5D5002781C1 /* Foundation.framework */; };
+		16591A322234D5E0002781C1 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A312234D5E0002781C1 /* GameController.framework */; };
+		16591A342234D5EA002781C1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A332234D5EA002781C1 /* GLKit.framework */; };
+		16591A362234D5F3002781C1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A352234D5F3002781C1 /* OpenAL.framework */; };
+		16591A382234D5FF002781C1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A372234D5FF002781C1 /* OpenGLES.framework */; };
+		16591A3A2234D60C002781C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A392234D60C002781C1 /* QuartzCore.framework */; };
+		16591A3C2234D630002781C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16591A3B2234D630002781C1 /* UIKit.framework */; };
+		16591A3E2234DA03002781C1 /* Sample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16591A3D2234DA03002781C1 /* Sample.cpp */; };
+		16591A722234DBA7002781C1 /* SetVSConstFMtxTestPS.pso in Resources */ = {isa = PBXBuildFile; fileRef = 16591A3F2234DB99002781C1 /* SetVSConstFMtxTestPS.pso */; };
+		16591A732234DBA7002781C1 /* DxCharaEye.tga in Resources */ = {isa = PBXBuildFile; fileRef = 16591A402234DB99002781C1 /* DxCharaEye.tga */; };
+		16591A742234DBA7002781C1 /* GradTest.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A412234DB99002781C1 /* GradTest.bmp */; };
+		16591A752234DBA7002781C1 /* ToonGradTex.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A422234DB9A002781C1 /* ToonGradTex.bmp */; };
+		16591A762234DBA7002781C1 /* SimpleModel.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A432234DB9A002781C1 /* SimpleModel.mqo */; };
+		16591A772234DBA7002781C1 /* KabeTex.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A442234DB9A002781C1 /* KabeTex.bmp */; };
+		16591A782234DBA7002781C1 /* test.mid in Resources */ = {isa = PBXBuildFile; fileRef = 16591A452234DB9A002781C1 /* test.mid */; };
+		16591A792234DBA7002781C1 /* Kao.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A462234DB9A002781C1 /* Kao.bmp */; };
+		16591A7A2234DBA7002781C1 /* SetVSConstFArrayTestPS.pso in Resources */ = {isa = PBXBuildFile; fileRef = 16591A472234DB9B002781C1 /* SetVSConstFArrayTestPS.pso */; };
+		16591A7B2234DBA7002781C1 /* Plane.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A482234DB9B002781C1 /* Plane.mqo */; };
+		16591A7C2234DBA7002781C1 /* SimpleModelVertexColor.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A492234DB9B002781C1 /* SimpleModelVertexColor.mqo */; };
+		16591A7D2234DBA7002781C1 /* SetVSConstFArrayTestVS.vso in Resources */ = {isa = PBXBuildFile; fileRef = 16591A4A2234DB9B002781C1 /* SetVSConstFArrayTestVS.vso */; };
+		16591A7E2234DBA7002781C1 /* FilterTest.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A4B2234DB9C002781C1 /* FilterTest.mqo */; };
+		16591A7F2234DBA7002781C1 /* Tex3.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A4C2234DB9C002781C1 /* Tex3.bmp */; };
+		16591A802234DBA7002781C1 /* test2.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A4D2234DB9C002781C1 /* test2.bmp */; };
+		16591A812234DBA7002781C1 /* back.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A4E2234DB9C002781C1 /* back.bmp */; };
+		16591A822234DBA7002781C1 /* AddressTest.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A4F2234DB9C002781C1 /* AddressTest.mqo */; };
+		16591A832234DBA7002781C1 /* testWav.enc in Resources */ = {isa = PBXBuildFile; fileRef = 16591A502234DB9D002781C1 /* testWav.enc */; };
+		16591A842234DBA7002781C1 /* Tex1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A512234DB9D002781C1 /* Tex1.bmp */; };
+		16591A852234DBA7002781C1 /* Src1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A522234DB9D002781C1 /* Src1.bmp */; };
+		16591A862234DBA7002781C1 /* BloomTestStage.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A532234DB9D002781C1 /* BloomTestStage.mqo */; };
+		16591A872234DBA7002781C1 /* test3.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A542234DB9E002781C1 /* test3.bmp */; };
+		16591A882234DBA7002781C1 /* Test1.enc in Resources */ = {isa = PBXBuildFile; fileRef = 16591A552234DB9E002781C1 /* Test1.enc */; };
+		16591A892234DBA7002781C1 /* test4.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A562234DB9E002781C1 /* test4.bmp */; };
+		16591A8A2234DBA7002781C1 /* BackCulling.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A572234DB9E002781C1 /* BackCulling.mqo */; };
+		16591A8B2234DBA7002781C1 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16591A582234DB9F002781C1 /* test.wav */; };
+		16591A8C2234DBA7002781C1 /* DxChara.x in Resources */ = {isa = PBXBuildFile; fileRef = 16591A592234DB9F002781C1 /* DxChara.x */; };
+		16591A8D2234DBA7002781C1 /* SetVSConstFMtxTestVS.vso in Resources */ = {isa = PBXBuildFile; fileRef = 16591A5A2234DB9F002781C1 /* SetVSConstFMtxTestVS.vso */; };
+		16591A8E2234DBA7002781C1 /* ColTestStage.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A5B2234DBA0002781C1 /* ColTestStage.mqo */; };
+		16591A8F2234DBA7002781C1 /* test1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A5C2234DBA0002781C1 /* test1.bmp */; };
+		16591A902234DBA7002781C1 /* SetRenderTargetTestPS.pso in Resources */ = {isa = PBXBuildFile; fileRef = 16591A5D2234DBA0002781C1 /* SetRenderTargetTestPS.pso */; };
+		16591A912234DBA7002781C1 /* Scene2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16591A5E2234DBA0002781C1 /* Scene2.jpg */; };
+		16591A922234DBA7002781C1 /* test6.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A5F2234DBA1002781C1 /* test6.bmp */; };
+		16591A932234DBA7002781C1 /* testDiv.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A602234DBA1002781C1 /* testDiv.bmp */; };
+		16591A942234DBA7002781C1 /* BlendGraph.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A612234DBA1002781C1 /* BlendGraph.bmp */; };
+		16591A952234DBA7002781C1 /* test6_a.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A622234DBA2002781C1 /* test6_a.bmp */; };
+		16591A962234DBA7002781C1 /* GMap.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A632234DBA2002781C1 /* GMap.bmp */; };
+		16591A972234DBA7002781C1 /* Src2.tga in Resources */ = {isa = PBXBuildFile; fileRef = 16591A642234DBA2002781C1 /* Src2.tga */; };
+		16591A982234DBA7002781C1 /* SetPSConstFTestPS.pso in Resources */ = {isa = PBXBuildFile; fileRef = 16591A652234DBA3002781C1 /* SetPSConstFTestPS.pso */; };
+		16591A992234DBA7002781C1 /* TexAddrTransfTest.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A662234DBA3002781C1 /* TexAddrTransfTest.bmp */; };
+		16591A9A2234DBA7002781C1 /* TexAddrTransfTest.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A672234DBA3002781C1 /* TexAddrTransfTest.mqo */; };
+		16591A9B2234DBA7002781C1 /* testMask2.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A682234DBA4002781C1 /* testMask2.bmp */; };
+		16591A9C2234DBA7002781C1 /* Num.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A692234DBA4002781C1 /* Num.bmp */; };
+		16591A9D2234DBA7002781C1 /* SimplePillarStage.mqo in Resources */ = {isa = PBXBuildFile; fileRef = 16591A6A2234DBA4002781C1 /* SimplePillarStage.mqo */; };
+		16591A9E2234DBA7002781C1 /* Tex2.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A6B2234DBA5002781C1 /* Tex2.bmp */; };
+		16591A9F2234DBA7002781C1 /* testMask.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A6C2234DBA5002781C1 /* testMask.bmp */; };
+		16591AA02234DBA7002781C1 /* Mesh.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 16591A6D2234DBA5002781C1 /* Mesh.bmp */; };
+		16591AA12234DBA7002781C1 /* DxCharaEye2.tga in Resources */ = {isa = PBXBuildFile; fileRef = 16591A6E2234DBA5002781C1 /* DxCharaEye2.tga */; };
+		16591AA22234DBA7002781C1 /* Scene1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16591A6F2234DBA6002781C1 /* Scene1.jpg */; };
+		16591AA32234DBA7002781C1 /* test_midについて.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16591A702234DBA6002781C1 /* test_midについて.txt */; };
+		16591AA42234DBA7002781C1 /* TestTex1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16591A712234DBA6002781C1 /* TestTex1.jpg */; };
+		16C3A9DA23C3AE76007B9BF2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C3A9D923C3AE76007B9BF2 /* MessageUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16591A0D2234D1E8002781C1 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16591A172234D1E9002781C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16591A192234D20A002781C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16591A1C2234D20A002781C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16591A1E2234D20A002781C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16591A272234D597002781C1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		16591A292234D5AD002781C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		16591A2B2234D5BA002781C1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		16591A2D2234D5C5002781C1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		16591A2F2234D5D5002781C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		16591A312234D5E0002781C1 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		16591A332234D5EA002781C1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		16591A352234D5F3002781C1 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		16591A372234D5FF002781C1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		16591A392234D60C002781C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		16591A3B2234D630002781C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		16591A3D2234DA03002781C1 /* Sample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sample.cpp; sourceTree = "<group>"; };
+		16591A3F2234DB99002781C1 /* SetVSConstFMtxTestPS.pso */ = {isa = PBXFileReference; lastKnownFileType = file; name = SetVSConstFMtxTestPS.pso; path = Data/SetVSConstFMtxTestPS.pso; sourceTree = SOURCE_ROOT; };
+		16591A402234DB99002781C1 /* DxCharaEye.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = DxCharaEye.tga; path = Data/DxCharaEye.tga; sourceTree = SOURCE_ROOT; };
+		16591A412234DB99002781C1 /* GradTest.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = GradTest.bmp; path = Data/GradTest.bmp; sourceTree = SOURCE_ROOT; };
+		16591A422234DB9A002781C1 /* ToonGradTex.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = ToonGradTex.bmp; path = Data/ToonGradTex.bmp; sourceTree = SOURCE_ROOT; };
+		16591A432234DB9A002781C1 /* SimpleModel.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleModel.mqo; path = Data/SimpleModel.mqo; sourceTree = SOURCE_ROOT; };
+		16591A442234DB9A002781C1 /* KabeTex.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = KabeTex.bmp; path = Data/KabeTex.bmp; sourceTree = SOURCE_ROOT; };
+		16591A452234DB9A002781C1 /* test.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = test.mid; path = Data/test.mid; sourceTree = SOURCE_ROOT; };
+		16591A462234DB9A002781C1 /* Kao.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Kao.bmp; path = Data/Kao.bmp; sourceTree = SOURCE_ROOT; };
+		16591A472234DB9B002781C1 /* SetVSConstFArrayTestPS.pso */ = {isa = PBXFileReference; lastKnownFileType = file; name = SetVSConstFArrayTestPS.pso; path = Data/SetVSConstFArrayTestPS.pso; sourceTree = SOURCE_ROOT; };
+		16591A482234DB9B002781C1 /* Plane.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Plane.mqo; path = Data/Plane.mqo; sourceTree = SOURCE_ROOT; };
+		16591A492234DB9B002781C1 /* SimpleModelVertexColor.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleModelVertexColor.mqo; path = Data/SimpleModelVertexColor.mqo; sourceTree = SOURCE_ROOT; };
+		16591A4A2234DB9B002781C1 /* SetVSConstFArrayTestVS.vso */ = {isa = PBXFileReference; lastKnownFileType = file; name = SetVSConstFArrayTestVS.vso; path = Data/SetVSConstFArrayTestVS.vso; sourceTree = SOURCE_ROOT; };
+		16591A4B2234DB9C002781C1 /* FilterTest.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FilterTest.mqo; path = Data/FilterTest.mqo; sourceTree = SOURCE_ROOT; };
+		16591A4C2234DB9C002781C1 /* Tex3.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Tex3.bmp; path = Data/Tex3.bmp; sourceTree = SOURCE_ROOT; };
+		16591A4D2234DB9C002781C1 /* test2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = test2.bmp; path = Data/test2.bmp; sourceTree = SOURCE_ROOT; };
+		16591A4E2234DB9C002781C1 /* back.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = back.bmp; path = Data/back.bmp; sourceTree = SOURCE_ROOT; };
+		16591A4F2234DB9C002781C1 /* AddressTest.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AddressTest.mqo; path = Data/AddressTest.mqo; sourceTree = SOURCE_ROOT; };
+		16591A502234DB9D002781C1 /* testWav.enc */ = {isa = PBXFileReference; lastKnownFileType = file; name = testWav.enc; path = Data/testWav.enc; sourceTree = SOURCE_ROOT; };
+		16591A512234DB9D002781C1 /* Tex1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Tex1.bmp; path = Data/Tex1.bmp; sourceTree = SOURCE_ROOT; };
+		16591A522234DB9D002781C1 /* Src1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Src1.bmp; path = Data/Src1.bmp; sourceTree = SOURCE_ROOT; };
+		16591A532234DB9D002781C1 /* BloomTestStage.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BloomTestStage.mqo; path = Data/BloomTestStage.mqo; sourceTree = SOURCE_ROOT; };
+		16591A542234DB9E002781C1 /* test3.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = test3.bmp; path = Data/test3.bmp; sourceTree = SOURCE_ROOT; };
+		16591A552234DB9E002781C1 /* Test1.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test1.enc; path = Data/Test1.enc; sourceTree = SOURCE_ROOT; };
+		16591A562234DB9E002781C1 /* test4.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = test4.bmp; path = Data/test4.bmp; sourceTree = SOURCE_ROOT; };
+		16591A572234DB9E002781C1 /* BackCulling.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BackCulling.mqo; path = Data/BackCulling.mqo; sourceTree = SOURCE_ROOT; };
+		16591A582234DB9F002781C1 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = test.wav; path = Data/test.wav; sourceTree = SOURCE_ROOT; };
+		16591A592234DB9F002781C1 /* DxChara.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DxChara.x; path = Data/DxChara.x; sourceTree = SOURCE_ROOT; };
+		16591A5A2234DB9F002781C1 /* SetVSConstFMtxTestVS.vso */ = {isa = PBXFileReference; lastKnownFileType = file; name = SetVSConstFMtxTestVS.vso; path = Data/SetVSConstFMtxTestVS.vso; sourceTree = SOURCE_ROOT; };
+		16591A5B2234DBA0002781C1 /* ColTestStage.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ColTestStage.mqo; path = Data/ColTestStage.mqo; sourceTree = SOURCE_ROOT; };
+		16591A5C2234DBA0002781C1 /* test1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = test1.bmp; path = Data/test1.bmp; sourceTree = SOURCE_ROOT; };
+		16591A5D2234DBA0002781C1 /* SetRenderTargetTestPS.pso */ = {isa = PBXFileReference; lastKnownFileType = file; name = SetRenderTargetTestPS.pso; path = Data/SetRenderTargetTestPS.pso; sourceTree = SOURCE_ROOT; };
+		16591A5E2234DBA0002781C1 /* Scene2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Scene2.jpg; path = Data/Scene2.jpg; sourceTree = SOURCE_ROOT; };
+		16591A5F2234DBA1002781C1 /* test6.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = test6.bmp; path = Data/test6.bmp; sourceTree = SOURCE_ROOT; };
+		16591A602234DBA1002781C1 /* testDiv.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = testDiv.bmp; path = Data/testDiv.bmp; sourceTree = SOURCE_ROOT; };
+		16591A612234DBA1002781C1 /* BlendGraph.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = BlendGraph.bmp; path = Data/BlendGraph.bmp; sourceTree = SOURCE_ROOT; };
+		16591A622234DBA2002781C1 /* test6_a.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = test6_a.bmp; path = Data/test6_a.bmp; sourceTree = SOURCE_ROOT; };
+		16591A632234DBA2002781C1 /* GMap.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = GMap.bmp; path = Data/GMap.bmp; sourceTree = SOURCE_ROOT; };
+		16591A642234DBA2002781C1 /* Src2.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = Src2.tga; path = Data/Src2.tga; sourceTree = SOURCE_ROOT; };
+		16591A652234DBA3002781C1 /* SetPSConstFTestPS.pso */ = {isa = PBXFileReference; lastKnownFileType = file; name = SetPSConstFTestPS.pso; path = Data/SetPSConstFTestPS.pso; sourceTree = SOURCE_ROOT; };
+		16591A662234DBA3002781C1 /* TexAddrTransfTest.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = TexAddrTransfTest.bmp; path = Data/TexAddrTransfTest.bmp; sourceTree = SOURCE_ROOT; };
+		16591A672234DBA3002781C1 /* TexAddrTransfTest.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TexAddrTransfTest.mqo; path = Data/TexAddrTransfTest.mqo; sourceTree = SOURCE_ROOT; };
+		16591A682234DBA4002781C1 /* testMask2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = testMask2.bmp; path = Data/testMask2.bmp; sourceTree = SOURCE_ROOT; };
+		16591A692234DBA4002781C1 /* Num.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Num.bmp; path = Data/Num.bmp; sourceTree = SOURCE_ROOT; };
+		16591A6A2234DBA4002781C1 /* SimplePillarStage.mqo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimplePillarStage.mqo; path = Data/SimplePillarStage.mqo; sourceTree = SOURCE_ROOT; };
+		16591A6B2234DBA5002781C1 /* Tex2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Tex2.bmp; path = Data/Tex2.bmp; sourceTree = SOURCE_ROOT; };
+		16591A6C2234DBA5002781C1 /* testMask.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = testMask.bmp; path = Data/testMask.bmp; sourceTree = SOURCE_ROOT; };
+		16591A6D2234DBA5002781C1 /* Mesh.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Mesh.bmp; path = Data/Mesh.bmp; sourceTree = SOURCE_ROOT; };
+		16591A6E2234DBA5002781C1 /* DxCharaEye2.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = DxCharaEye2.tga; path = Data/DxCharaEye2.tga; sourceTree = SOURCE_ROOT; };
+		16591A6F2234DBA6002781C1 /* Scene1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Scene1.jpg; path = Data/Scene1.jpg; sourceTree = SOURCE_ROOT; };
+		16591A702234DBA6002781C1 /* test_midについて.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "test_midについて.txt"; path = "Data/test_midについて.txt"; sourceTree = SOURCE_ROOT; };
+		16591A712234DBA6002781C1 /* TestTex1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestTex1.jpg; path = Data/TestTex1.jpg; sourceTree = SOURCE_ROOT; };
+		16C3A9D923C3AE76007B9BF2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16591A0A2234D1E8002781C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C3A9DA23C3AE76007B9BF2 /* MessageUI.framework in Frameworks */,
+				16591A3C2234D630002781C1 /* UIKit.framework in Frameworks */,
+				16591A3A2234D60C002781C1 /* QuartzCore.framework in Frameworks */,
+				16591A382234D5FF002781C1 /* OpenGLES.framework in Frameworks */,
+				16591A362234D5F3002781C1 /* OpenAL.framework in Frameworks */,
+				16591A342234D5EA002781C1 /* GLKit.framework in Frameworks */,
+				16591A322234D5E0002781C1 /* GameController.framework in Frameworks */,
+				16591A302234D5D5002781C1 /* Foundation.framework in Frameworks */,
+				16591A2E2234D5C5002781C1 /* CoreText.framework in Frameworks */,
+				16591A2C2234D5BA002781C1 /* CoreMotion.framework in Frameworks */,
+				16591A2A2234D5AD002781C1 /* CoreGraphics.framework in Frameworks */,
+				16591A282234D597002781C1 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16591A042234D1E8002781C1 = {
+			isa = PBXGroup;
+			children = (
+				16591AA52234DBAE002781C1 /* Data */,
+				16591A0F2234D1E8002781C1 /* Sample */,
+				16591A0E2234D1E8002781C1 /* Products */,
+				16591A262234D597002781C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		16591A0E2234D1E8002781C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16591A0D2234D1E8002781C1 /* Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16591A0F2234D1E8002781C1 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				16591A162234D1E9002781C1 /* Main.storyboard */,
+				16591A3D2234DA03002781C1 /* Sample.cpp */,
+				16591A192234D20A002781C1 /* Assets.xcassets */,
+				16591A1B2234D20A002781C1 /* LaunchScreen.storyboard */,
+				16591A1E2234D20A002781C1 /* Info.plist */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		16591A262234D597002781C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16C3A9D923C3AE76007B9BF2 /* MessageUI.framework */,
+				16591A3B2234D630002781C1 /* UIKit.framework */,
+				16591A392234D60C002781C1 /* QuartzCore.framework */,
+				16591A372234D5FF002781C1 /* OpenGLES.framework */,
+				16591A352234D5F3002781C1 /* OpenAL.framework */,
+				16591A332234D5EA002781C1 /* GLKit.framework */,
+				16591A312234D5E0002781C1 /* GameController.framework */,
+				16591A2F2234D5D5002781C1 /* Foundation.framework */,
+				16591A2D2234D5C5002781C1 /* CoreText.framework */,
+				16591A2B2234D5BA002781C1 /* CoreMotion.framework */,
+				16591A292234D5AD002781C1 /* CoreGraphics.framework */,
+				16591A272234D597002781C1 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16591AA52234DBAE002781C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				16591A4F2234DB9C002781C1 /* AddressTest.mqo */,
+				16591A4E2234DB9C002781C1 /* back.bmp */,
+				16591A572234DB9E002781C1 /* BackCulling.mqo */,
+				16591A612234DBA1002781C1 /* BlendGraph.bmp */,
+				16591A532234DB9D002781C1 /* BloomTestStage.mqo */,
+				16591A5B2234DBA0002781C1 /* ColTestStage.mqo */,
+				16591A592234DB9F002781C1 /* DxChara.x */,
+				16591A402234DB99002781C1 /* DxCharaEye.tga */,
+				16591A6E2234DBA5002781C1 /* DxCharaEye2.tga */,
+				16591A4B2234DB9C002781C1 /* FilterTest.mqo */,
+				16591A632234DBA2002781C1 /* GMap.bmp */,
+				16591A412234DB99002781C1 /* GradTest.bmp */,
+				16591A442234DB9A002781C1 /* KabeTex.bmp */,
+				16591A462234DB9A002781C1 /* Kao.bmp */,
+				16591A6D2234DBA5002781C1 /* Mesh.bmp */,
+				16591A692234DBA4002781C1 /* Num.bmp */,
+				16591A482234DB9B002781C1 /* Plane.mqo */,
+				16591A6F2234DBA6002781C1 /* Scene1.jpg */,
+				16591A5E2234DBA0002781C1 /* Scene2.jpg */,
+				16591A652234DBA3002781C1 /* SetPSConstFTestPS.pso */,
+				16591A5D2234DBA0002781C1 /* SetRenderTargetTestPS.pso */,
+				16591A472234DB9B002781C1 /* SetVSConstFArrayTestPS.pso */,
+				16591A4A2234DB9B002781C1 /* SetVSConstFArrayTestVS.vso */,
+				16591A3F2234DB99002781C1 /* SetVSConstFMtxTestPS.pso */,
+				16591A5A2234DB9F002781C1 /* SetVSConstFMtxTestVS.vso */,
+				16591A432234DB9A002781C1 /* SimpleModel.mqo */,
+				16591A492234DB9B002781C1 /* SimpleModelVertexColor.mqo */,
+				16591A6A2234DBA4002781C1 /* SimplePillarStage.mqo */,
+				16591A522234DB9D002781C1 /* Src1.bmp */,
+				16591A642234DBA2002781C1 /* Src2.tga */,
+				16591A702234DBA6002781C1 /* test_midについて.txt */,
+				16591A452234DB9A002781C1 /* test.mid */,
+				16591A582234DB9F002781C1 /* test.wav */,
+				16591A5C2234DBA0002781C1 /* test1.bmp */,
+				16591A552234DB9E002781C1 /* Test1.enc */,
+				16591A4D2234DB9C002781C1 /* test2.bmp */,
+				16591A542234DB9E002781C1 /* test3.bmp */,
+				16591A562234DB9E002781C1 /* test4.bmp */,
+				16591A622234DBA2002781C1 /* test6_a.bmp */,
+				16591A5F2234DBA1002781C1 /* test6.bmp */,
+				16591A602234DBA1002781C1 /* testDiv.bmp */,
+				16591A6C2234DBA5002781C1 /* testMask.bmp */,
+				16591A682234DBA4002781C1 /* testMask2.bmp */,
+				16591A712234DBA6002781C1 /* TestTex1.jpg */,
+				16591A502234DB9D002781C1 /* testWav.enc */,
+				16591A512234DB9D002781C1 /* Tex1.bmp */,
+				16591A6B2234DBA5002781C1 /* Tex2.bmp */,
+				16591A4C2234DB9C002781C1 /* Tex3.bmp */,
+				16591A662234DBA3002781C1 /* TexAddrTransfTest.bmp */,
+				16591A672234DBA3002781C1 /* TexAddrTransfTest.mqo */,
+				16591A422234DB9A002781C1 /* ToonGradTex.bmp */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16591A0C2234D1E8002781C1 /* Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16591A232234D20A002781C1 /* Build configuration list for PBXNativeTarget "Sample" */;
+			buildPhases = (
+				16591A092234D1E8002781C1 /* Sources */,
+				16591A0A2234D1E8002781C1 /* Frameworks */,
+				16591A0B2234D1E8002781C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sample;
+			productName = Sample;
+			productReference = 16591A0D2234D1E8002781C1 /* Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16591A052234D1E8002781C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "TAKUMI YAMADA";
+				TargetAttributes = {
+					16591A0C2234D1E8002781C1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 16591A082234D1E8002781C1 /* Build configuration list for PBXProject "Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16591A042234D1E8002781C1;
+			productRefGroup = 16591A0E2234D1E8002781C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16591A0C2234D1E8002781C1 /* Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16591A0B2234D1E8002781C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16591A822234DBA7002781C1 /* AddressTest.mqo in Resources */,
+				16591A9B2234DBA7002781C1 /* testMask2.bmp in Resources */,
+				16591A902234DBA7002781C1 /* SetRenderTargetTestPS.pso in Resources */,
+				16591A9A2234DBA7002781C1 /* TexAddrTransfTest.mqo in Resources */,
+				16591A8D2234DBA7002781C1 /* SetVSConstFMtxTestVS.vso in Resources */,
+				16591AA12234DBA7002781C1 /* DxCharaEye2.tga in Resources */,
+				16591A772234DBA7002781C1 /* KabeTex.bmp in Resources */,
+				16591A862234DBA7002781C1 /* BloomTestStage.mqo in Resources */,
+				16591A792234DBA7002781C1 /* Kao.bmp in Resources */,
+				16591A9C2234DBA7002781C1 /* Num.bmp in Resources */,
+				16591A7A2234DBA7002781C1 /* SetVSConstFArrayTestPS.pso in Resources */,
+				16591A8A2234DBA7002781C1 /* BackCulling.mqo in Resources */,
+				16591A9D2234DBA7002781C1 /* SimplePillarStage.mqo in Resources */,
+				16591A982234DBA7002781C1 /* SetPSConstFTestPS.pso in Resources */,
+				16591A922234DBA7002781C1 /* test6.bmp in Resources */,
+				16591AA32234DBA7002781C1 /* test_midについて.txt in Resources */,
+				16591A7C2234DBA7002781C1 /* SimpleModelVertexColor.mqo in Resources */,
+				16591A932234DBA7002781C1 /* testDiv.bmp in Resources */,
+				16591A732234DBA7002781C1 /* DxCharaEye.tga in Resources */,
+				16591A872234DBA7002781C1 /* test3.bmp in Resources */,
+				16591A972234DBA7002781C1 /* Src2.tga in Resources */,
+				16591A952234DBA7002781C1 /* test6_a.bmp in Resources */,
+				16591A992234DBA7002781C1 /* TexAddrTransfTest.bmp in Resources */,
+				16591A892234DBA7002781C1 /* test4.bmp in Resources */,
+				16591A8F2234DBA7002781C1 /* test1.bmp in Resources */,
+				16591A812234DBA7002781C1 /* back.bmp in Resources */,
+				16591A7F2234DBA7002781C1 /* Tex3.bmp in Resources */,
+				16591A742234DBA7002781C1 /* GradTest.bmp in Resources */,
+				16591A1D2234D20A002781C1 /* LaunchScreen.storyboard in Resources */,
+				16591AA22234DBA7002781C1 /* Scene1.jpg in Resources */,
+				16591A8C2234DBA7002781C1 /* DxChara.x in Resources */,
+				16591A802234DBA7002781C1 /* test2.bmp in Resources */,
+				16591A1A2234D20A002781C1 /* Assets.xcassets in Resources */,
+				16591A852234DBA7002781C1 /* Src1.bmp in Resources */,
+				16591A912234DBA7002781C1 /* Scene2.jpg in Resources */,
+				16591A942234DBA7002781C1 /* BlendGraph.bmp in Resources */,
+				16591A832234DBA7002781C1 /* testWav.enc in Resources */,
+				16591AA02234DBA7002781C1 /* Mesh.bmp in Resources */,
+				16591A882234DBA7002781C1 /* Test1.enc in Resources */,
+				16591A7D2234DBA7002781C1 /* SetVSConstFArrayTestVS.vso in Resources */,
+				16591A752234DBA7002781C1 /* ToonGradTex.bmp in Resources */,
+				16591A782234DBA7002781C1 /* test.mid in Resources */,
+				16591A762234DBA7002781C1 /* SimpleModel.mqo in Resources */,
+				16591AA42234DBA7002781C1 /* TestTex1.jpg in Resources */,
+				16591A842234DBA7002781C1 /* Tex1.bmp in Resources */,
+				16591A9E2234DBA7002781C1 /* Tex2.bmp in Resources */,
+				16591A8B2234DBA7002781C1 /* test.wav in Resources */,
+				16591A9F2234DBA7002781C1 /* testMask.bmp in Resources */,
+				16591A962234DBA7002781C1 /* GMap.bmp in Resources */,
+				16591A722234DBA7002781C1 /* SetVSConstFMtxTestPS.pso in Resources */,
+				16591A7B2234DBA7002781C1 /* Plane.mqo in Resources */,
+				16591A8E2234DBA7002781C1 /* ColTestStage.mqo in Resources */,
+				16591A182234D1E9002781C1 /* Main.storyboard in Resources */,
+				16591A7E2234DBA7002781C1 /* FilterTest.mqo in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16591A092234D1E8002781C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16591A3E2234DA03002781C1 /* Sample.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		16591A162234D1E9002781C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16591A172234D1E9002781C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16591A1B2234D20A002781C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16591A1C2234D20A002781C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16591A212234D20A002781C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../プロジェクトに追加すべきファイル_iOS用";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LIBRARY_SEARCH_PATHS = "../プロジェクトに追加すべきファイル_iOS用";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lDxLib_iOS",
+					"-lDxUseCLib_iOS",
+					"-lpng_iOS",
+					"-lzlib_iOS",
+					"-ljpeg_iOS",
+					"-lbullet_iOS",
+					"-logg_iOS",
+					"-lvorbis_iOS",
+					"-ltheora_iOS",
+					"-ltiff_iOS",
+					"-lopus_iOS",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		16591A222234D20A002781C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../プロジェクトに追加すべきファイル_iOS用";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LIBRARY_SEARCH_PATHS = "../プロジェクトに追加すべきファイル_iOS用";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-lDxLib_iOS",
+					"-lDxUseCLib_iOS",
+					"-lpng_iOS",
+					"-lzlib_iOS",
+					"-ljpeg_iOS",
+					"-lbullet_iOS",
+					"-logg_iOS",
+					"-lvorbis_iOS",
+					"-ltheora_iOS",
+					"-ltiff_iOS",
+					"-lopus_iOS",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16591A242234D20A002781C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IE.Sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16591A252234D20A002781C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IE.Sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16591A082234D1E8002781C1 /* Build configuration list for PBXProject "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16591A212234D20A002781C1 /* Debug */,
+				16591A222234D20A002781C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16591A232234D20A002781C1 /* Build configuration list for PBXNativeTarget "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16591A242234D20A002781C1 /* Debug */,
+				16591A252234D20A002781C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16591A052234D1E8002781C1 /* Project object */;
+}
