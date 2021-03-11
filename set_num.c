@@ -281,13 +281,35 @@ void	set_light(t_data *data, char *s, int *flag)
 	ft_advance_isspace(&s);
 }
 
+void set_object(t_object **object, int *n_obj)
+{
+	int i;
+	t_object *alt;
+
+	i = 0;
+	if ((alt = (t_object *)malloc((1 + 1)*sizeof(t_object)))==NULL)
+		return ;
+	while (i < *n_obj)
+	{
+		alt[i] = (*object)[i];
+		i++;
+	}
+	// free(*object);
+	*object = alt;
+	++(*n_obj);
+}
+
 void	set_sphere(t_data *data, char *s, int *flag)
 {
-	set_vec(&data->Pc, &s, flag);
+	t_object *alt;
+
+	set_object(&(data->object_arr), &(data->n_obj));
+	alt = &(data->object_arr[data->n_obj - 1]);
+	set_vec(&(alt->Pc), &s, flag);
 	ft_advance_isspace(&s);
-	data->R = set_double(&s, flag);
+	alt->r = set_double(&s, flag);
 	ft_advance_isspace(&s);
-	set_color(&data->rgbsp, &s, flag);
+	set_color(&alt->rgbsp, &s, flag);
 }
 
 void	check_type(t_data *img, char *s, int *flag, t_type *type_flag)

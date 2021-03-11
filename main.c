@@ -32,6 +32,7 @@ int main()
 	t_type		type_flag;
     t_data      data;
 
+    data.n_obj = 0;
     fd = open("./minirt.rt", 0);
     get_line_info(&data, &flag, fd, &type_flag);
     // int i;
@@ -47,62 +48,112 @@ int main()
     // i= 0;
     double Pv[3] = {data.Pv.x, data.Pv.y, data.Pv.z}; //カメラ
     // double Pv[3] = {0.0, 0.0, 2000.0}; //カメラ
-    double Pc[3] = {data.Pc.x, data.Pc.y, data.Pc.z};//球
-    double R = data.R / 2; //大きさ
+
+
+    double Pc[10][3];
+    double R[10];
     
+    // Pc[i][3]= {data.object_arr[i].Pc.x, data.object_arr[i].Pc.y, data.object_arr[i].Pc.z};//球
+    // R[i]= set_R(data.object_arr[i]) //大きさ
+
+    // printf("%f,%f,%f\n",data.object_arr[2].Pc.x, data.object_arr[2].Pc.y, data.object_arr[2].Pc.z);
+    for (int i = 0; i < data.n_obj ; i++)
+    {
+        Pc[i][0] = data.object_arr[i].Pc.x;
+        Pc[i][1] = data.object_arr[i].Pc.y;
+        Pc[i][2] = data.object_arr[i].Pc.z;
+        R[i] = data.object_arr[i].r/2;
+    }
+    
+    // printf("%f,%f,%f\n",data.object_arr[0].Pc.x, data.object_arr[0].Pc.y, data.object_arr[0].Pc.z);
+    // printf("%f,%f,%f\n",data.object_arr[1].Pc.x, data.object_arr[1].Pc.y, data.object_arr[1].Pc.z);
+//*    
     double v[3];
     int i, j;
 
-    for(i = 0; i <= width; i++){
-        for(j = 0;j <= height; j++){
+    for(i = 0; i <= 1000; i++){
+        for(j = 0;j <= 1000; j++){
             v[0] = i + 0.5 - Pv[0];
             v[1] = j + 0.5 - Pv[1];
             v[2] = 0 - Pv[2];
 
-            double A, B2, C, D;
+            double A, B2, C, D0, D;
             double Pvc[3];
             int k;
-            for( k=0 ; k<3 ; k++ ) Pvc[k] = Pv[k]-Pc[k];
-            A = InnerProduct( v, v );
-            B2 = InnerProduct( Pvc, v );
-            C = InnerProduct( Pvc, Pvc )-R*R;
-            D = B2*B2-A*C;
+            int s0 = -1,s;
+            double t0,t;
+
+            for (s=0;s<2;s++)
+            {
+                for( k=0 ; k<3 ; k++ ) Pvc[k] = Pv[k]-Pc[s][k];
+                A = InnerProduct( v, v );
+                B2 = InnerProduct( Pvc, v );
+                C = InnerProduct( Pvc, Pvc )-R[s]*R[s];
+                D = B2*B2-A*C;
+                if( D >= 0 ){
+                    t = (-B2-sqrt(D))/A;
+                    if( s0 < 0 || t < t0 ){
+                        s0 = s;
+                        t0 = t;
+                        D0 = D;
+                    }
+                }
+            }
 
             double P[3];
-            double t0;
-            t0 = (-B2-sqrt(D))/A;
-            for( k=0 ; k<3 ; k++ ) P[k] = Pv[k]+v[k]*t0;
-
-            double PL[3] = {data.Pl.x, data.Pl.y, data.Pl.z};//light
+            double PL[3] = {-20000, -20000, 20000};
             double N[3], vL[3];
             double cosA;
-            /* P は視線と球の交点 */
-            for( k=0 ; k<3 ; k++ ) N[k] = P[k]-Pc[k];
-            for( k=0 ; k<3 ; k++ ) vL[k] = P[k]-PL[k];
-            cosA = -InnerProduct( vL, N );
-            cosA /= sqrt( InnerProduct( vL, vL )*InnerProduct( N, N ) );
             double vR[3];
             int col;
             double w, cosG;
-            /* P は視線と球の交点 */
-            w = -InnerProduct( vL, N )/InnerProduct( N, N );
-            for( k=0 ; k<3 ; k++ ) vR[k] = 2*w*N[k]+vL[k];
-            cosG = -InnerProduct(vR,v)/
-            sqrt(InnerProduct(vR, vR)*InnerProduct(v,v));
-            if( cosG < 0 ) cosG = 0;
-            cosG = pow(cosG,10);
-            double Kd = 1.0, Ks = data.Ks, Ie = data.Ie, I = 255.0;
-            double rgbsp[3] = {data.rgbsp.r, data.rgbsp.g, data.rgbsp.b}, rgbl[3] = {data.rgbl.r, data.rgbl.g, data.rgbl.b}, color[3];
-            if( D >= 0 ){
-            for( k=0 ; k<3 ; k++ ){
-            color[k] = rgbsp[k]*Kd*cosA;
-            if( color[k] < I*Ks*cosG ) color[k] = rgbl[k]*Ks*cosG;
-            if( color[k] < rgbsp[k]*Ie ) color[k] = rgbsp[k]*Ie;
-            }
-            col = create_trgb(0, color[0], color[1], color[2]);
-            mlx_pixel_put(mlx, mlx_win, i, j, col);
+            double v1[3], Pvc1[3];
+
+            if (s0 >= 0){
+                for( k=0 ; k<3 ; k++ ) P[k] = Pv[k]+v[k]*t0;
+                /* P は視線と球の交点 */
+                for( k=0 ; k<3 ; k++ ) N[k] = P[k]-Pc[s0][k];
+                for( k=0 ; k<3 ; k++ ) vL[k] = P[k]-PL[k];
+                
+                /* P は視線と球の交点 */
+                for ( s = 0; s < 2; s++)
+                {
+                    if( s == s0 ) continue;
+                    for( k=0 ; k<3 ; k++ ) v1[k] = PL[k]-P[k];
+                    for( k=0 ; k<3 ; k++ ) Pvc1[k] = P[k]-Pc[s][k];
+                    A = InnerProduct( v1, v1 );
+                    B2 = InnerProduct( Pvc1, v1 );
+                    C = InnerProduct( Pvc1, Pvc1 )-R[s]*R[s];
+                    D = B2*B2-A*C ;
+                    if( D >= 0 && (-B2-sqrt(D))/A > 0 ) break;
+                }
+                if(s<2)
+                {
+                    cosA = cosG = 0.0;
+                }else {
+                    cosA = -InnerProduct( vL, N );
+                    cosA /= sqrt( InnerProduct( vL, vL )*InnerProduct( N, N ) );
+                    w = -InnerProduct( vL, N )/InnerProduct( N, N );
+                    for( k=0 ; k<3 ; k++ ) vR[k] = 2*w*N[k]+vL[k];
+                    cosG = -InnerProduct(vR,v)/
+                    sqrt(InnerProduct(vR, vR)*InnerProduct(v,v));
+                    if( cosG < 0 ) cosG = 0;
+                    cosG = pow(cosG,10);
+                }
+                double Kd = 1.0, Ks = 0.7, Ie = 0.1, I = 255.0;
+                double RGB[2][3] = {{255, 0, 0},{0,255,0}}, color[3];
+                if( D0 >= 0 ){
+                    for( k=0 ; k<3 ; k++ ){
+                        color[k] = RGB[s0][k]*Kd*cosA;
+                        if( color[k] < I*Ks*cosG ) color[k] = I*Ks*cosG;
+                        if( color[k] < RGB[s0][k]*Ie ) color[k] = RGB[s0][k]*Ie;
+                    }
+                }
+                col = create_trgb(0, color[0], color[1], color[2]);
+                mlx_pixel_put(mlx, mlx_win, i, j, col);
             }else{
-            mlx_pixel_put(mlx, mlx_win, i, j, 127);
+                col = create_trgb(0, 55, 55, 55);
+                mlx_pixel_put(mlx, mlx_win, i, j, col);
             }
         }
     }

@@ -92,6 +92,12 @@ typedef struct	s_object {
 	t_vec	vec;
 	t_vec	no_vec;
 	t_vec	*points;
+	t_col rgba;
+    t_col rgbl;
+    t_col rgbsp;
+    t_vec Pv;
+    t_vec Pc;
+    t_vec Pl;
 	double	height;
 	double	r;
 	double	size;
