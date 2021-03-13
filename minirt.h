@@ -1,5 +1,5 @@
-#ifndef MINIRT_H
-# define MINIRT_H
+#ifndef ARTMINIRT_H
+# define ARTMINIRT_H
 # include "mlx.h"
 # include <math.h>
 # include <sys/ipc.h>
@@ -76,6 +76,8 @@
 # define KEY_RIGHT 65363
 # define KEY_DOWN 65364
 
+
+
 typedef struct	s_vec {
 	double	x;
 	double	y;
@@ -88,22 +90,23 @@ typedef struct	s_col {
 	double	b;
 }				t_col;
 
+typedef struct	s_type {
+	int		first;
+	int		second;
+	int		resolution;
+	int		ambient;
+}				t_type;
+
 typedef struct	s_object {
 	t_vec	vec;
 	t_vec	no_vec;
 	t_vec	*points;
-	t_col rgba;
-    t_col rgbl;
-    t_col rgbsp;
-    t_vec Pv;
-    t_vec Pc;
-    t_vec Pl;
+	t_col rgb;
 	double	height;
 	double	r;
 	double	size;
 	int		h_fov;
 	double	ratio;
-	int		color;
 	char	type;
 }				t_object;
 
@@ -113,35 +116,29 @@ typedef struct s_data
     int height;
     double Ie;
 	double Ks;
-    double R;
     t_col rgba;
-    t_col rgbl;
-    t_col rgbsp;
-    t_vec Pv;
-    t_vec Pc;
-    t_vec Pl;
-    t_object	*camera;
-	t_object	*object_arr;
-	int n_obj;
+    t_object	*camera_arr;
 	int			n_camera;
+	t_object	*object_arr;
+	int         n_obj;
+    t_object    *light_arr;
+    int         n_light;
+    t_vec		screen;
+	int			front_ob_i;
+	t_vec		front_ob_point;
+	int			save_flag;
 }           t_data;
+
 typedef struct	s_vars {
 	void	*mlx;
 	void	*win;
 	t_data	img;
 	t_data	*img_array;
 }				t_vars;
-typedef struct	s_type {
-	int		first;
-	int		second;
-	int		resolution;
-	int		ambient;
-}				t_type;
-
 double InnerProduct( double a[3], double b[3]);
 int		create_trgb(int t, int r, int g, int b);
 void	check_line_info(t_data *img, char *s, int *flag, t_type *type_flag);
-void	get_line_info(t_data *data, int *flag, int fd, t_type *type_flag);
+void	get_line_info(t_data *data, int fd);
 void	ft_free(char *memo, char **line);
 int		ft_put_line(char **line, char **memo, char *buf);
 int		get_next_line(int fd, char **line);
